@@ -10,6 +10,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 		<http:listener doc:name="GET /error" doc:id="73b10a59-7c5c-49e1-8bca-5553623e00c4" config-ref="HTTP_Listener_config" path="error">
 		</http:listener>
 		<flow-ref doc:name="Flow Reference" doc:id="17949cdc-a1ed-49ae-9b61-6c49e23c39ea" name="errorHandelingFlow"/>
+		<logger level="INFO" doc:name="Logger" doc:id="3699c4ba-841e-4490-9181-977f930d4793" message="dummy logger"/>
 		<set-payload value='#["success"]' doc:name="Set Payload" doc:id="ce24fa42-91ec-4fb8-a93d-595f3e0d3c84" />
 		<error-handler >
 			<on-error-continue enableNotifications="true" logException="true" doc:name="On Error Continue" doc:id="7988a96d-9f20-49e2-b643-76dca781cbe2" >
